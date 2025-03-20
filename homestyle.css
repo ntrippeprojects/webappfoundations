@@ -1,0 +1,16 @@
+body {
+    background-color: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+h1 {
+    color: navy;
+  }
+
+p {
+    margin: 25px 50px 75px 100px;
+}
+
+table {
+    text-align: center;
+  }
