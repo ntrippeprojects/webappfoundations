@@ -13,17 +13,17 @@
 }
 
 body {
-  background-color: rgb(239, 199, 177);
+  background-color: rgb(214, 187, 172);
 }
 
 h1 {
   font-family: 'SpaceGrotesk';
-  color: rgb(17, 76, 122);
+  color: rgb(3, 49, 85);
   text-align: center;
 }
 
 h2 {
   font-family: 'DMSans';
-  color: rgb(17, 76, 122);
+  color: rgb(3, 49, 85);
   text-align: center;
 }
