@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Link from "react-router-dom";
-import NavigationMenu from './components/NavigationMenu.jsx';
-import ThanksWave from './components/ThanksWave.jsx';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Home } from './pages/Home.jsx';
+import { Search } from './pages/Search.jsx';
+import { Content } from './pages/Content.jsx';
 
 // css and fonts
 import "./App.css";
@@ -11,12 +12,19 @@ import "./static/fonts/DMSans.ttf";
 // second component - accordion, below h2
 import AccordionHome from './components/AccordionHome.jsx';
 
-function App() {
-  return <div className="MainFont">
-    <NavigationMenu />
-    <AccordionHome />
-    <ThanksWave />
-    </div>;
+function Pages() {
+  return <> 
+  <div>
+  <BrowserRouter>
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path="/home" element ={<Home />} />
+      <Route path="/search" element ={<Search />} />
+      <Route path="/content" element ={<Content />} />
+    </Routes>
+  </BrowserRouter>
+</div>  
+</>
 }
 
-export default App
+export default Pages;

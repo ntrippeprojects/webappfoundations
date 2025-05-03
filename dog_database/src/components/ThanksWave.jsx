@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import SecondWave from "../SecondWave.jpg";
+import Puppy from "../Puppy.jpg";
 import "../App.css";
 
 function ThanksWave() {
@@ -10,7 +10,7 @@ function ThanksWave() {
     <div className="ThanksWaveOverlay">
         <div className="ThanksWaveText">Thanks for Visiting!</div>
     </div>
-        <img src={SecondWave} alt="Dog Waving" className="rounded" width="250" height="250"/>
+        <img src={Puppy} alt="Dog Smiling" className="rounded" width="250" height="336"/>
 </div>
 </>
 }
