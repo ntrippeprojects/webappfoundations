@@ -3,14 +3,14 @@ import NavigationMenu from '../components/NavigationMenu';
 import "../App.css";
 import "../static/fonts/DMSans.ttf";
 
-export default function Content() {
+export default function Addbreed() {
     return <>
         <div className="MainFont">
         <NavigationMenu />
-        <h1 className="Title">Dog Content!</h1>
-        <h2 className="FirstSection">Because who doesn't love a video of a cute dog?</h2>
+        <h1 className="Title">Add a Dog Breed</h1>
+        <h2 className="FirstSection">Feel free to add any breed not listed!</h2>
         </div>
         </>
 }
 
-export {Content}
+export {Addbreed}

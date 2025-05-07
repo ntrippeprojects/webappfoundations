@@ -14,10 +14,10 @@ function NavigationMenu() {
             <Link to="/" className="navbar-brand">Home</Link>
           </li>
           <li className="nav-item">
-            <Link to="/Search" className="navbar-brand">Search for Dog Breeds</Link>
+            <Link to="/Search" className="navbar-brand">View Dog Breeds</Link>
           </li>
           <li className="nav-item">
-            <Link to="/Content" className="navbar-brand">Dog Content</Link>
+            <Link to="/Addbreed" className="navbar-brand">Add Dog Breeds</Link>
           </li>
         </ul>
     </div>

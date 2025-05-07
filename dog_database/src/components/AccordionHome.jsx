@@ -27,7 +27,6 @@ function AccordionHome() {
             <Accordion.Body>
               The dog breeds used in the project and database are the breeds listed on the official&nbsp;
               <a href="https://www.akc.org/dog-breeds/" target="_blank">American Kennel Club website</a>.
-              Dog content is shared from&nbsp;<a href="https://www.youtube.com/" target="_blank">YouTube</a>.
               Any content of my fiancée and I's dog, Beetle, is provided by me directly! :)
             </Accordion.Body>
           </Accordion.Item>

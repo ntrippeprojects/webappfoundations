@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Home } from './pages/Home.jsx';
 import { Search } from './pages/Search.jsx';
-import { Content } from './pages/Content.jsx';
+import { Addbreed } from './pages/Addbreed.jsx';
 
 // css and fonts
 import "./App.css";
@@ -20,7 +20,7 @@ function Pages() {
       <Route index element={<Home />} />
       <Route path="/home" element ={<Home />} />
       <Route path="/search" element ={<Search />} />
-      <Route path="/content" element ={<Content />} />
+      <Route path="/addbreed" element ={<Addbreed />} />
     </Routes>
   </BrowserRouter>
 </div>  

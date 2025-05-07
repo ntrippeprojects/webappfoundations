@@ -104,3 +104,11 @@
     border: 5px solid #000000;
     margin-bottom: 15px;
   }
+
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
