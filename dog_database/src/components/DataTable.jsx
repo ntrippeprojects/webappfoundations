@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import "../datastyles.css";
 
 function DataTable() {
   const [data, setData] = useState([]);
@@ -40,9 +42,10 @@ function DataTable() {
   return (
     <div>
     <h1 className="FirstSection">Check out the breeds and their characteristics.</h1>
-    <div>
-    <button>Don't see a breed listed? Click to add one.</button>
+    <div className="centerbuttondiv">
+    <button className="addbutton"><Link to="/Addbreed">Don't see a breed listed? Click to add one.</Link></button>
     </div>
+    <div className="centertable">
     <table>
       <thead>
         <tr>
@@ -61,6 +64,7 @@ function DataTable() {
         ))}
       </tbody>
     </table>
+    </div>
     </div>
   );
 }

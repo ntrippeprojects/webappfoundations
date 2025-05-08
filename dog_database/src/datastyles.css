@@ -1,0 +1,55 @@
+.breedformsubmit {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.centertable {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.centerbuttondiv {
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 25px;  
+}
+
+.addbutton {
+    color: white;
+    border-radius: 25px;
+    border-color: rgb(33, 120, 201);
+    background: rgb(33, 120, 201);
+    width: 400px;
+    height: 50px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+th, td {
+    width: 250px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+th {
+    background-color: rgb(250, 119, 43);
+    color: white;
+  }
+
+tr:nth-child(even) {
+    background-color: #e4dfdf;
+}

@@ -19,7 +19,7 @@ app.get("/", (req,res)=>{
 })
 
 app.get("/dogdata", (req,res)=>{
-    const q = "SELECT * FROM dogdata"
+    const q = "SELECT DogBreed as 'Breed', BreedGroup as 'Breed Group', BarkingLevel as 'Barking Level', CoatType as 'Coat Type', Shedding as 'Shedding Level', MinWeight as 'Minimum Weight (lbs)', MaxWeight as 'Maximum Weight (lbs)' from dogdata"; 
     db.query(q,(err,data)=>{
         if(err) return res.json("Error: Unable to return data.")
         return res.json(data)
