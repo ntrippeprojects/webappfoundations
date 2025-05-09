@@ -19,6 +19,12 @@ function NavigationMenu() {
           <li className="nav-item">
             <Link to="/Addbreed" className="navbar-brand">Add Dog Breeds</Link>
           </li>
+          <li className="nav-item">
+            <Link to="/DUbreed" className="navbar-brand">Delete or Update Breeds</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/Images" className="navbar-brand">Image Links</Link>
+          </li>
         </ul>
     </div>
   </nav>

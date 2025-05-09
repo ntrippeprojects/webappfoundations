@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Home } from './pages/Home.jsx';
 import { Search } from './pages/Search.jsx';
 import { Addbreed } from './pages/Addbreed.jsx';
+import { DUbreed } from './pages/DUbreed.jsx';
+import { Images } from './pages/Images.jsx';
 
 // css and fonts
 import "./App.css";
@@ -21,6 +23,8 @@ function Pages() {
       <Route path="/home" element ={<Home />} />
       <Route path="/search" element ={<Search />} />
       <Route path="/addbreed" element ={<Addbreed />} />
+      <Route path="/dubreed" element ={<DUbreed />} />
+      <Route path="/images" element = {<Images />} />
     </Routes>
   </BrowserRouter>
 </div>  

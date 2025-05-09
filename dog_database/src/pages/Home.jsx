@@ -19,4 +19,4 @@ function Home() {
     </div>
 }
 
-export {Home};
+export {Home}

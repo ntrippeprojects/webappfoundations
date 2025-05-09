@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import "../datastyles.css";
 
-const AddBreedForm = () => {
+const UpdateForm = () => {
     const [DogBreed,setDogBreed] = useState({
         DogBreed:"",
         BreedGroup:"",
@@ -14,7 +14,10 @@ const AddBreedForm = () => {
         MaxWeight:null
     });
 
-    const navsubmit = useNavigate()
+    const navsubmit = useNavigate();
+    const location = useLocation();
+
+    const DogBreedId = location.pathname.split("/")[2];
 
     const handleChange = (e) =>{
         setDogBreed(prev=>({...prev, [e.target.name]: e.target.value }));
@@ -23,7 +26,7 @@ const AddBreedForm = () => {
     const handleClick = async (e) =>{
         e.preventDefault()
         try{
-            await axios.post("http://localhost:8800/dogdata", DogBreed)
+            await axios.put("http://localhost:8800/dogdata"+DogBreed)
             navsubmit("/Search")
         }catch(err){
             console.log(err)
@@ -41,9 +44,9 @@ const AddBreedForm = () => {
             <input className="inputstyle" type="text" placeholder='Shedding Level' onChange={handleChange} name="Shedding" />
             <input className="inputstyle" type="number" placeholder='Minimum Weight (lbs)' onChange={handleChange} name="MinWeight" />
             <input className="inputstyle" type="number" placeholder='Maximum Weight (lbs)' onChange={handleChange} name="MaxWeight" />
-        <button className="addbutton" onClick={handleClick}>Add Breed</button>
+        <button className="addbutton" onClick={handleClick}>Update Breed</button>
         </div>
     )
 }
 
-export default AddBreedForm
+export default UpdateForm

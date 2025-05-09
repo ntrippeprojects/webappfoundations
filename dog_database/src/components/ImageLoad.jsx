@@ -1,8 +1,11 @@
+import MainLogo from "../Logo2.png";
+import "../App.css";
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
+import axios from 'axios';
 import "../datastyles.css";
 
-function DataTable() {
+function ImageLoad({ imageId }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -10,7 +13,7 @@ function DataTable() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:8800/dogdata");
+        const response = await fetch("http://localhost:8800/dogimages");
         if (!response.ok) {
           throw new Error(`HTTP error. See status: ${response.status}`);
         }
@@ -41,11 +44,9 @@ function DataTable() {
 
   return (
     <div>
-    <h1 className="FirstSection">Check out the breeds and their characteristics.</h1>
-    <div className="centerbuttondiv">
-    <button className="addbutton"><Link to="/Addbreed">Add a Dog Breed</Link></button>
-    <button className="deletebutton"><Link to="/DUbreed">Delete or Update a Dog Breed</Link></button>
-    </div>
+    <div className="MainFont">
+    <h1 className="Title">Image Links</h1>
+    <h2 className="FirstSection">Check out pictures of the AKC-listed breeds, provided by AKC.</h2>
     <div className="centertable">
     <table>
       <thead>
@@ -67,7 +68,8 @@ function DataTable() {
     </table>
     </div>
     </div>
-  );
+    </div>
+    )
 }
 
-export default DataTable;
+export default ImageLoad;

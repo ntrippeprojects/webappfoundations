@@ -36,6 +36,33 @@ app.post("/dogdata", (req,res)=>{
     });
 });
 
+app.delete("/dogdata/:DogBreed", (req,res)=>{
+    const DogBreedId = req.params.DogBreed;
+    const q = "DELETE FROM dogdata WHERE DogBreed = ?"
+
+    db.query(q,[DogBreedId], (err,data)=>{
+        return res.json("Breed deleted successfully.")
+    })
+})
+
+app.put("/dogdata/:DogBreed", (req,res)=>{
+    const DogBreedId = req.params.DogBreed;
+    const q = "UPDATE dogdata SET `DogBreed` = ?, `BreedGroup` = ?, `BarkingLevel` = ?, `CoatType` = ?, `Shedding` = ?, `MinWeight` = ?, `MaxWeight` = ? WHERE DogBreed =?";
+    const values = [req.body.DogBreed,req.body.BreedGroup,req.body.BarkingLevel,req.body.CoatType,req.body.Shedding,req.body.MinWeight,req.body.MaxWeight];
+
+    db.query(q,[...values,DogBreedId], (err,data)=>{
+        return res.json("Breed deleted successfully.")
+    })
+})
+
+app.get("/dogimages", (req,res)=>{
+    const q = "SELECT DogBreed as 'Breed', DogImageLink as 'Photo' from dogimages"; 
+    db.query(q,(err,data)=>{
+        if(err) return res.json("Error: Unable to return data.")
+        return res.json(data)
+    })
+})
+
 app.listen(8800, ()=>{
     console.log("Connected to backend database.")
 })
